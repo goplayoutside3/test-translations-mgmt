@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
+import Link from 'next/link'
 
 export default function Home() {
   const { t } = useTranslation('home')
@@ -17,6 +18,18 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>{t('welcome')}</h1>
         <p className={styles.description}>{t('description')}</p>
+        <div>
+          <a className={styles.locale}>
+            <Link href='/' locale='en'>
+              English
+            </Link>
+          </a>
+          <a className={styles.locale}>
+            <Link href='/' locale='fr'>
+              French
+            </Link>
+          </a>
+        </div>
       </main>
     </div>
   )
