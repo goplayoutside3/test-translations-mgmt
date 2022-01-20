@@ -1,4 +1,7 @@
 {
     "welcome": "Welcome!",
-    "description": "This text is in English."
+    "description": "This text is in English.",
+    "nested": {
+        "key1": "This is inside a nested object"
+    }
 }
